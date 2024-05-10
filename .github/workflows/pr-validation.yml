@@ -17,7 +17,7 @@ on:
       - '.github/workflows/pr-validation-maui.yml'
 
 jobs:  
-  build:
+  buildandtest:
     runs-on: WoArm-runner
     steps:
       - uses: actions/checkout@v4
@@ -29,3 +29,5 @@ jobs:
         run: dotnet workload install aspire
       - name: Build 
         run: dotnet build eShop.Web.slnf
+      - name: Test
+        run: dotnet test eShop.Web.slnf
