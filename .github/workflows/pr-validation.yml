@@ -22,8 +22,8 @@ jobs:
     steps:
       - name: Print Windows Version
         run: |
-            echo "\033[1;32mWindows Version:\033[0m ${{ runner.os }}"
-            echo "\033[1;32mArchitecture:\033[0m ${{ runner.arch }}"
+          echo "\x1b[1;32mWindows Version:\x1b[0m ${{ runner.os }}"
+          echo "\x1b[1;32mArchitecture:\x1b[0m ${{ runner.arch }}"
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
