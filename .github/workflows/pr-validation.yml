@@ -18,8 +18,7 @@ on:
 
 jobs:  
   test:
-    runs-on: 
-      group: WoArm-runners
+    runs-on: WoArm-runner
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
