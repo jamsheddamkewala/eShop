@@ -22,8 +22,10 @@ jobs:
     steps:
       - name: Print Windows Version
         run: |
-          echo "\x1b[1;32mWindows Version:\x1b[0m ${{ runner.os }}"
-          echo "\x1b[1;32mArchitecture:\x1b[0m ${{ runner.arch }}"
+          echo "::set-env name=ANSI_RESET::\x1b[0m"
+          echo "::set-env name=ANSI_GREEN::\x1b[1;32m"          
+          echo "${{ env.ANSI_GREEN }}Windows Version:${{ env.ANSI_RESET }} ${{ runner.os }}"
+          echo "${{ env.ANSI_GREEN }}Architecture:${{ env.ANSI_RESET }} ${{ runner.arch }}"      
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
