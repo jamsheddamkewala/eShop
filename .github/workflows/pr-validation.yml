@@ -20,10 +20,6 @@ jobs:
   test:
     runs-on: WoArm-runner
     steps:
-      - name: Print Windows Version
-        run: |
-          echo "Windows Version: ${{ runner.os }}"
-          echo "Architecture: ${{ runner.arch }}"
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
