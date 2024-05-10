@@ -20,6 +20,11 @@ jobs:
   test:
     runs-on: WoArm-runner
     steps:
+      - name: Print Windows Version
+        run: |
+          echo -e "\0331;32mWindows Version:\033[0m ${{ runner.os }}"
+          echo -e "\033[1;32mArchitecture:\033[0m ${{ runner.arch }}"
+          echo -e "\033[0m"
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
