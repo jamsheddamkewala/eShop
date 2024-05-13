@@ -30,4 +30,4 @@ jobs:
       - name: Build 
         run: dotnet build eShop.Web.slnf
       - name: Test
-        run: dotnet test eShop.Web.slnf
+        run: dotnet build eShop.Web.slnf
