@@ -20,10 +20,9 @@ jobs:
   buildandtest:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v4
-      - name: Display Runner config
-        run: echo "Runner OS: $env:RUNNER_OS."
-        run: echo "Runner Arch: $env:RUNNER_ARCH."
+      - name: condition 1
+        if: runner.os == 'Windows'
+        run: echo "The operating system on the runner is $env:RUNNER_OS." 
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
       - name: Update Workloads
