@@ -20,7 +20,7 @@ jobs:
   buildandtest:
     runs-on: gh-windows-arm64-runner
     steps:
-      - name: Setup .NET (global.json)
+      - name: Setup  .NET (global.json)
         uses: actions/setup-dotnet@v3
       - name: Update Workloads
         run: dotnet workload update
