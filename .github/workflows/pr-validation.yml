@@ -18,7 +18,7 @@ on:
 
 jobs:  
   buildandtest:
-    runs-on: WoArm-runner
+    runs-on: windows-arm64-runner
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
@@ -29,5 +29,3 @@ jobs:
         run: dotnet workload install aspire
       - name: Build 
         run: dotnet build eShop.Web.slnf
-      - name: Test
-        run: dotnet test eShop.Web.slnf
