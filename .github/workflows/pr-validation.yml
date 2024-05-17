@@ -20,6 +20,7 @@ jobs:
   buildandtest:
     runs-on: windows-arm64-runner
     steps:
+      - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
       - name: Update Workloads
