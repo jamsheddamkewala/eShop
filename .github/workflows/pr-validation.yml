@@ -18,12 +18,8 @@ on:
 
 jobs:  
   buildandtest:
-    runs-on: self-hosted
+    runs-on: gh-windows-arm64-runner
     steps:
-      - name: Display Runner OS
-        run: echo "Runner OS is $env:RUNNER_OS."
-      - name: Display Runner Arch
-        run: echo "Runner Arch is $env:RUNNER_ARCH."
       - name: Setup .NET (global.json)
         uses: actions/setup-dotnet@v3
       - name: Update Workloads
