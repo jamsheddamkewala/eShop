@@ -18,7 +18,7 @@ on:
 
 jobs:  
   buildandtest:
-    runs-on: self-hosted
+    runs-on: gh-windows-arm64-runner
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET (global.json)
